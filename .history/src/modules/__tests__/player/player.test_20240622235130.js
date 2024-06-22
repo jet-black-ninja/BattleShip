@@ -2,10 +2,9 @@ import player from "../../factories/player"
 let combatant 
 let cpu 
 describe('player', () => {
-    //initialize players before each test
     beforeEach(() => {
         combatant = player('combatant');
-        cpu = player('cpu',true);
+        cpu = player('cpu');
     });
 
     test('player turn ' , () => {
