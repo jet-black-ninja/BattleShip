@@ -13,7 +13,7 @@ const Game =( () => {
         function getCPU(){
             return this.cpu;
         }
-        return {player, cpu, getPlayer, getCPU };
+        return {player, cpu, getPlayer, getCpu };
     }
         // Getters
         function getState(){

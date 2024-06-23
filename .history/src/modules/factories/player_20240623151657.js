@@ -102,13 +102,13 @@ const Player = (() =>{
     }
 
     function fillQueue(row,col){
-        // if only origin of first hit left, empty the queue
+        //if only origin of first hit left, empty the queue
         if(searchQueue.length === 1)
             searchQueue = [];
-        // on attack miss
+        //on attack miss
         if(getMap().getBoard()[row][col]==='miss') return ;
 
-        // if hit , store location for future directions
+        //if hit , store location for future directions
         let origin = false;
         if(searchQueue.length === 0){
             searchQueue.push([row,col]);

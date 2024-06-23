@@ -171,6 +171,4 @@ const Gameboard =(() => {
             isEveryShipSunk,    
         }
     }
-    return {createMap};
-})()
-export default Gameboard;
+})

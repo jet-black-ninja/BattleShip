@@ -69,7 +69,7 @@ const Player = (() =>{
                     col,
                 ])
             } else {
-                placed = getMap().placeY(Ship.createShip(fleet[0],length[0]),[
+                placed = getMap().placeY(ship.createShip(fleet[0],length[0]),[
                     row,
                     col,
                 ])
@@ -83,8 +83,7 @@ const Player = (() =>{
 
     function cpuPlay(){
         let invalidCoordinate =true;
-        let x;
-        let y;
+        let x,y;
         while(invalidCoordinate){
             if(searchQueue.length > 1) [x,y] = getRandomAndRemove(searchQueue);
             else {
@@ -102,13 +101,13 @@ const Player = (() =>{
     }
 
     function fillQueue(row,col){
-        // if only origin of first hit left, empty the queue
+        //if only origin of first hit left, empty the queue
         if(searchQueue.length === 1)
             searchQueue = [];
-        // on attack miss
+        //on attack miss
         if(getMap().getBoard()[row][col]==='miss') return ;
 
-        // if hit , store location for future directions
+        //if hit , store location for future directions
         let origin = false;
         if(searchQueue.length === 0){
             searchQueue.push([row,col]);

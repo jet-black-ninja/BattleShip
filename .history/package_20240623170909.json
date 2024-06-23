@@ -215,7 +215,7 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "jest --testPathPattern=battleship/src/modules/__tests__",
+    "test": "jest --testPathPattern=src/modules/__tests__/gameboard",
     "watch": " jest --watch ",
     "start": "webpack serve --open",
     "build": "webpack --config webpack.prod.js",

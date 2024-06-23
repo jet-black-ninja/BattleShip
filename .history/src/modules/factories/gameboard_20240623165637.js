@@ -37,9 +37,6 @@ const Gameboard =(() => {
             shipOnDrag.name=shipInfoObj.name;
             shipOnDrag.length=shipInfoObj.length;
         }
-        function setAllShipsNotFound(){
-            fleet.forEach((ship)=> ship.resetFound());
-        }
         // Fleet
 
         function addToFleet(battleship){
@@ -171,6 +168,4 @@ const Gameboard =(() => {
             isEveryShipSunk,    
         }
     }
-    return {createMap};
-})()
-export default Gameboard;
+})
