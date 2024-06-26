@@ -23,7 +23,7 @@ const helper = (() => {
     function createMap(description){
         const map = document.createElement('div');
         map.id = `board-${description}`;
-        map.classList.add('board',description);
+        map.classList.add('board', description);
 
         map.appendChild(createLettersSection());
         map.appendChild(createNumbersSection());
