@@ -173,9 +173,7 @@ const Player = (() =>{
         array.splice(randomIndex,1);
         return randomElement;
     }
-    return {
-        createPlayer
-    }
+    return {createPlayer}
 })()
 
 export default Player;

@@ -1,4 +1,4 @@
-import {player} from "../../factories/player"
+import player from "../../factories/player"
 let combatant 
 let cpu 
 describe('player', () => {

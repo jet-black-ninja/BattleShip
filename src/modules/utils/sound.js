@@ -15,7 +15,7 @@ const Sound  = (() =>{
                 const source = audioCtx.createBufferSource();
                 source.buffer = buffer;
                 source.connect(audioCtx.destination)
-                source.start(0);
+                source.start();
             })
             audioCtx.resume();
         }

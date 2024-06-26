@@ -1,4 +1,4 @@
-import{ship} from "../../factories/ship"
+import ship from "../../factories/ship"
 
 describe("ship damage", () => {
     test("times hit:1", () => {
