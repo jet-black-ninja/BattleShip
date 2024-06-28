@@ -48,7 +48,7 @@ const fleet = (() => {
         if(axis === 'Y') rotation = 'rotate(90deg) translate(0,-100%)';
         const currentTime=getCurrentTime();
         const container = helper.create('div',{
-            className:'ship-image-container';
+            className:'ship-image-container',
         })
 
         container.classList.add('bleep')
@@ -65,8 +65,8 @@ const fleet = (() => {
 
         const image = helper.create('div',{
             className:
-            player.isCpu===true ? `${shipName}-cpu`:`${shipName}-player`;
-        })
+            player.isCpu===true ? `${shipName}-cpu`:`${shipName}-player`,
+        });
         image.src= loadShipImage(shipName);
         image.style.height= '95%';
         image.style.aspectRatio =`${length}/1`;
@@ -75,27 +75,27 @@ const fleet = (() => {
     }
 
     function loadShipImage(shipName){
-        let shipImage
+        let shipImage;
         switch (shipName) {
         case 'carrier':
-            shipImage = carrier
-            break
+            shipImage = carrier;
+            break;
         case 'battleship':
-            shipImage = battleship
-            break
+            shipImage = battleship;
+            break;
         case 'cruiser':
-            shipImage = cruiser
-            break
+            shipImage = cruiser;
+            break;
         case 'submarine':
-            shipImage = submarine
-            break
+            shipImage = submarine;
+            break;
         case 'destroyer':
-            shipImage = destroyer
-            break
+            shipImage = destroyer;
+            break;
         default:
-            shipImage = ''
+            shipImage = '';
         }
-        return shipImage        
+        return shipImage;        
     }
 
     return {loadFleet, loadShipOnBoard};
