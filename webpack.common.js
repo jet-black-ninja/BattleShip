@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/modules/main.js',
+  target: 'node',
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -18,7 +19,21 @@ module.exports = {
   },
   resolve: {
       fallback: {
-        util: require.resolve("util/")
+        util: require.resolve("util/"),
+        "child_process": false,
+        "os":false,
+        "url": require.resolve("url/"),
+        "fs": false,
+    "tls": false,
+    "net": false,
+    "path": false,
+    "zlib": false,
+    "http": false,
+    "https": false,
+    "stream": false,
+    "crypto": false,
+    "vm":false,
+    "crypto-browserify": require.resolve('crypto-browserify'),
       }
   },
   optimization: {
