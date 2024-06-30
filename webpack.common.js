@@ -16,6 +16,11 @@ module.exports = {
     assetModuleFilename: 'img/[name][hash][ext][query]',
     clean: true,
   },
+  resolve: {
+      fallback: {
+        util: require.resolve("util/")
+      }
+  },
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
