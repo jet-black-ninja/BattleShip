@@ -97,7 +97,7 @@ const pregame = (() => {
       id: 'github-button',
       className: 'github-button',
       textContent: 'GITHUB',
-      href: 'https://github.com/lovrozagar',
+      href: 'https://github.com/jet-black-ninja',
       target: 'blank',
     })
 
