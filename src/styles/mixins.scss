@@ -1,3 +1,4 @@
+@import './variables.scss';
 @mixin fullHeightFillAvailable{
     min-height: 100vh;
     min-height: -webkit-fill-available;
